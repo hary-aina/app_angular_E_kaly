@@ -15,12 +15,16 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
+import {MatListModule} from '@angular/material/list';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './pages/home/home.component';
 import { NavbarComponent } from './pages/navbar/navbar.component';
+import { CommandeComponent } from './pages/commande/commande.component';
+
+//import {  NgxLoadingSpinnerModule } from 'ngx-loading-spinner';
 
 @NgModule({
   declarations: [
@@ -28,7 +32,8 @@ import { NavbarComponent } from './pages/navbar/navbar.component';
     LoginComponent,
     InscriptionComponent,
     HomeComponent,
-    NavbarComponent
+    NavbarComponent,
+    CommandeComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +47,9 @@ import { NavbarComponent } from './pages/navbar/navbar.component';
     MatToolbarModule,
     FormsModule,
     BrowserAnimationsModule,
-    MatIconModule
+    MatIconModule,
+    MatListModule
+    //NgxLoadingSpinnerModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
