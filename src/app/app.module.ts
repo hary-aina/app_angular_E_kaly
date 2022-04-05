@@ -34,6 +34,8 @@ import { LoginEkalyComponent } from './pages/EkalyBO/login-ekaly/login-ekaly.com
 import { NavbarEkalyComponent } from './pages/EkalyBO/navbar-ekaly/navbar-ekaly.component';
 import { HomeEkalyComponent } from './pages/EkalyBO/home-ekaly/home-ekaly.component';
 import { LoginLivreurComponent } from './pages/LivreurBO/login-livreur/login-livreur.component';
+import { NavbarLivreurComponent } from './pages/LivreurBO/navbar-livreur/navbar-livreur.component';
+import { HomeLivreurComponent } from './pages/LivreurBO/home-livreur/home-livreur.component';
 
 //import {  NgxLoadingSpinnerModule } from 'ngx-loading-spinner';
 
@@ -54,6 +56,8 @@ import { LoginLivreurComponent } from './pages/LivreurBO/login-livreur/login-liv
     NavbarEkalyComponent,
     HomeEkalyComponent,
     LoginLivreurComponent,
+    NavbarLivreurComponent,
+    HomeLivreurComponent,
   ],
   imports: [
     BrowserModule,

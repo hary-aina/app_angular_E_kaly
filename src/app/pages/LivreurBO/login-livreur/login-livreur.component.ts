@@ -26,7 +26,7 @@ export class LoginLivreurComponent implements OnInit {
     private cookie : CookieService,
     private router : Router,
   ) { 
-    this.email = "responsable@gmail.com";
+    this.email = "livreur@gmail.com";
     this.password = "1234";
   }
 

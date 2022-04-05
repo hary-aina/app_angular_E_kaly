@@ -11,6 +11,7 @@ import { CommandeRestoComponent } from "./pages/RestaurantBO/commande-resto/comm
 import { LoginEkalyComponent } from "./pages/EkalyBO/login-ekaly/login-ekaly.component";
 import { HomeEkalyComponent } from "./pages/EkalyBO/home-ekaly/home-ekaly.component";
 import { LoginLivreurComponent } from "./pages/LivreurBO/login-livreur/login-livreur.component";
+import { HomeLivreurComponent } from "./pages/LivreurBO/home-livreur/home-livreur.component";
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -25,6 +26,7 @@ const routes: Routes = [
   { path: 'ekaly-bo/login', component: LoginEkalyComponent },
   { path: 'ekaly-bo/home', component: HomeEkalyComponent },
   { path: 'livreur-bo/login', component: LoginLivreurComponent },
+  { path: 'livreur-bo/home', component: HomeLivreurComponent },
 ];
 
 @NgModule({
