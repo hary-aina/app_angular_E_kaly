@@ -45,6 +45,7 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { HttpLoadInterceptor } from './interceptor/http-load.interceptor';
 import { CommandeToDeliverComponent } from './pages/EkalyBO/commande-to-deliver/commande-to-deliver.component';
 import { LivreurComponent } from './pages/EkalyBO/livreur/livreur.component';
+import { DashboardRestoComponent } from './pages/RestaurantBO/dashboard-resto/dashboard-resto.component';
 
 @NgModule({
   declarations: [
@@ -68,6 +69,7 @@ import { LivreurComponent } from './pages/EkalyBO/livreur/livreur.component';
     LoaderComponent,
     CommandeToDeliverComponent,
     LivreurComponent,
+    DashboardRestoComponent,
   ],
   imports: [
     BrowserModule,

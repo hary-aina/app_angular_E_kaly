@@ -59,6 +59,7 @@ export class DetailCommandeComponent implements OnInit {
           restaurant_id: this.extraPlat.restaurant_id,
           restaurant_name: this.extraPlat.restaurant_name,
           prix_global: this.extraPlat.prix,
+          revient_global: this.extraPlat.revient,
           client_id: this.Client_id,
           client_name: this.Client_name,
           client_contact: this.Client_contact,
@@ -70,7 +71,8 @@ export class DetailCommandeComponent implements OnInit {
               {
                 plat_id: this.extraPlat._id,
                 plat_name: this.extraPlat.name,
-                plat_prix: this.extraPlat.prix,
+                plat_prix: parseInt(this.extraPlat.prix),
+                plat_revient: parseInt(this.extraPlat.revient),
                 nombre: 1
               }
           ],
@@ -92,6 +94,7 @@ export class DetailCommandeComponent implements OnInit {
           restaurant_id: this.extraCommande.restaurant_id,
           restaurant_name: this.extraCommande.restaurant_name,
           prix_global: this.extraCommande.prix_global,
+          revient_global: this.extraCommande.revient_global,
           client_id: this.extraCommande.client_id,
           client_name: this.extraCommande.client_name,
           client_contact: this.extraCommande.client_contact,
@@ -135,10 +138,12 @@ export class DetailCommandeComponent implements OnInit {
     let tmpPlat = {
       plat_id: plat._id,
       plat_name: plat.name,
-      plat_prix: plat.prix,
+      plat_prix: parseInt(plat.prix),
+      plat_revient: parseInt(plat.revient),
       nombre: 1
     }
     this.CommandeObject.prix_global = parseFloat(this.CommandeObject.prix_global) + parseFloat(plat.prix);
+    this.CommandeObject.revient_global = parseFloat(this.CommandeObject.revient_global) + parseFloat(plat.revient);
     this.CommandeObject.detail_commande.push(tmpPlat);
 
     console.log(this.CommandeObject, "add Plat");
@@ -148,12 +153,14 @@ export class DetailCommandeComponent implements OnInit {
   plusPlatNumber(plat:any){
     plat.nombre++;
     this.CommandeObject.prix_global = parseFloat(this.CommandeObject.prix_global) + parseFloat(plat.plat_prix);
+    this.CommandeObject.revient_global = parseFloat(this.CommandeObject.revient_global) + parseFloat(plat.plat_revient);
     //console.log(this.CommandeObject, "+ Plat");
   }
 
   minusPlatNumber(plat:any){
     plat.nombre --;
     this.CommandeObject.prix_global = parseFloat(this.CommandeObject.prix_global) - parseFloat(plat.plat_prix);
+    this.CommandeObject.revient_global = parseFloat(this.CommandeObject.revient_global) - parseFloat(plat.plat_revient);
     if(plat.nombre == 0){
       this.removePlat(plat);
     }
@@ -163,6 +170,7 @@ export class DetailCommandeComponent implements OnInit {
   removePlat(plat:any){
     this.CommandeObject.detail_commande = this.CommandeObject.detail_commande.filter((item: any) => item != plat);
     this.CommandeObject.prix_global = parseFloat(this.CommandeObject.prix_global) - (parseFloat(plat.plat_prix)*parseInt(plat.nombre));
+    this.CommandeObject.revient_global = parseFloat(this.CommandeObject.revient_global) - (parseFloat(plat.plat_revient)*parseInt(plat.nombre));
     
   }
 
@@ -182,6 +190,7 @@ export class DetailCommandeComponent implements OnInit {
         this.CommandeObject.restaurant_id, 
         this.CommandeObject.restaurant_name, 
         this.CommandeObject.prix_global, 
+        this.CommandeObject.revient_global, 
         this.CommandeObject.client_id, 
         this.CommandeObject.client_name, 
         this.CommandeObject.client_contact, 
@@ -207,6 +216,7 @@ export class DetailCommandeComponent implements OnInit {
         this.token, 
         this.CommandeObject._id, 
         this.CommandeObject.prix_global, 
+        this.CommandeObject.revient_global, 
         this.CommandeObject.detail_commande, 
         this.CommandeObject.lieu_adresse_livraison, 
         this.CommandeObject.client_contact
