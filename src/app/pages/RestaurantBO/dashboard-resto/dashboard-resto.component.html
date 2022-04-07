@@ -1,14 +1,15 @@
 <app-navbar-resto></app-navbar-resto>
 <div class="content" >
     <mat-card fxFlex="30">
-        <h2>Nombre de commande</h2>
-
+        <h2>Chiffre d'affaire</h2>
+        <p style="text-align:center; font-size:45px; margin-top: 40px;">{{chiffre.chiffre_affaire}}</p>
     </mat-card>
     <mat-card fxFlex="30">
-        <h2>Nombre de commande livré</h2>
-
+        <h2>Total coût</h2>
+        <p style="color:red; text-align:center; font-size:45px; margin-top: 40px;">-{{chiffre.cout}}</p>
     </mat-card> 
     <mat-card fxFlex="30">
-       <h2>Nombre de plat</h2>        
+       <h2>Benefice</h2>
+       <p style="color:#4f992d; text-align:center; font-size:45px; margin-top: 40px;">{{chiffre.benefice}}</p>        
     </mat-card> 
 </div>

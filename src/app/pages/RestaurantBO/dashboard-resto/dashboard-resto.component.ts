@@ -22,6 +22,8 @@ export class DashboardRestoComponent implements OnInit {
   per_page = 10;
   page_number = 1;
 
+  chiffre : any;
+
   constructor(
     private restaurantService : RestaurantService,
     private cookie : CookieService,
@@ -41,8 +43,25 @@ export class DashboardRestoComponent implements OnInit {
       this.router.navigate(['/resto-bo/login']);
     }
     else{
-      
+      this.getBenefit();
     }
+  }
+
+  getBenefit(){
+    let result = this.restaurantService.getBenefiteCommandeLivré(
+      this.token, 
+      this.restaurant_id
+    );
+    result.subscribe((data:any) => {
+      //console.log(data);
+      if(data.status != 200){
+        alert("lors de la mise a jour de la commande");
+      }else{
+        //use cookie there
+        this.chiffre = data.data[0];
+        
+      }
+    });
   }
 
 }

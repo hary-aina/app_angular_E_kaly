@@ -82,4 +82,16 @@ export class RestaurantService {
   //|-----------------------------------------|
   //|-------- fin resource comande -----------|
   //|-----------------------------------------|
+
+  //|---------------------------------------|
+  //|-------- resource dashboard -----------|
+  //|---------------------------------------|
+
+  getBenefiteCommandeLivré(token:string, resto_id:string){
+    return this.http.get(`${baseUrl}/restaurant/commande/dashboard/${resto_id}?token=${token}`);
+  }
+
+  //|-------------------------------------------|
+  //|-------- fin resource dashboard -----------|
+  //|-------------------------------------------|
 }
