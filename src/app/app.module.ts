@@ -19,6 +19,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { NgChartsModule } from 'ng2-charts';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -38,8 +39,6 @@ import { LoginLivreurComponent } from './pages/LivreurBO/login-livreur/login-liv
 import { NavbarLivreurComponent } from './pages/LivreurBO/navbar-livreur/navbar-livreur.component';
 import { HomeLivreurComponent } from './pages/LivreurBO/home-livreur/home-livreur.component';
 import { LoaderComponent } from './pages/loader/loader.component';
-
-//import {  NgxLoadingSpinnerModule } from 'ngx-loading-spinner';
 
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { HttpLoadInterceptor } from './interceptor/http-load.interceptor';
@@ -86,8 +85,8 @@ import { DashboardRestoComponent } from './pages/RestaurantBO/dashboard-resto/da
     MatIconModule,
     MatListModule,
     DragDropModule,
-    MatProgressSpinnerModule
-    //NgxLoadingSpinnerModule,
+    MatProgressSpinnerModule,
+    NgChartsModule
   ],
   providers: [
     {
