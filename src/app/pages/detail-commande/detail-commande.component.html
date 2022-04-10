@@ -17,7 +17,7 @@
                     <br>
                     <p>Lieu ou adress de livraison : <b><input required="required" type="text" [(ngModel)]="CommandeObject.lieu_adresse_livraison"></b></p>
                     <br>
-                    <p>Total : <b>{{CommandeObject.prix_global}}</b></p>
+                    <p>Total : <b>{{CommandeObject.prix_global}} Ar</b></p>
                 </div>
             </mat-card>
             <br>
@@ -27,7 +27,7 @@
             <div *ngFor="let plat of CommandeObject.detail_commande">
                 <mat-card class="card-content" fxLayout="row">
                     <span>{{plat.plat_name}}</span>
-                    <span>prix unitaire : {{plat.plat_prix}}</span>
+                    <span>prix unitaire : {{plat.plat_prix}} Ar</span>
                     <span>nombre : {{plat.nombre}}</span>
                     <div *ngIf="CommandeObject.etat == 0" class="card-content" >
                         <a mat-button (click)="minusPlatNumber(plat)" title="diminuer"><mat-icon>remove</mat-icon></a>
