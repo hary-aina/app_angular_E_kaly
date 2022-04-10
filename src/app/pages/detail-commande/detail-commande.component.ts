@@ -83,9 +83,8 @@ export class DetailCommandeComponent implements OnInit {
         this.getPlatResto(this.extraPlat.restaurant_id);
 
       }
-
       //modification commande
-      if(this.action == 'update'){
+      else if(this.action == 'update'){
         this.extraCommande = history.state.commande;
         //console.log(this.extraCommande);
 
@@ -111,6 +110,9 @@ export class DetailCommandeComponent implements OnInit {
         //avoir menu du restaurant
         this.getPlatResto(this.extraCommande.restaurant_id);
 
+      }
+      else{
+        this.router.navigate(['/commande'])
       }
 
     }
