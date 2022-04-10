@@ -17,7 +17,7 @@ export class HomeRestoComponent implements OnInit {
   token:string;
   resto_id:string;
 
-  per_page = 10;
+  per_page = 9;
   page_number = 1;
   plats : any = [];
 
