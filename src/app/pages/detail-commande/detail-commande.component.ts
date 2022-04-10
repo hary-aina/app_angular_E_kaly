@@ -133,6 +133,18 @@ export class DetailCommandeComponent implements OnInit {
       });
   }
 
+  //avoir plat du resto next
+  getPlatNext(){
+    this.page_number ++;
+    this.getPlatResto(this.CommandeObject.restaurant_id);
+  }
+
+  //avoir plat du resto previous
+  getPlatPrevious(){
+    this.page_number --;
+    this.getPlatResto(this.CommandeObject.restaurant_id);
+  }
+
   //|--------------------|
   //|  gestion des plat  |
   //|--------------------|
